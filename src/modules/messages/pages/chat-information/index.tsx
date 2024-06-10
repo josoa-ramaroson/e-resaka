@@ -1,5 +1,6 @@
 import { jennaImage, phoneIcon, videoIcon } from "../../../../assets";
-import { Button, ButtonGroup, ProfileImage } from "../../components";
+import { Button, ButtonGroup } from "../../../../components";
+import { ProfileImage } from "../../components";
 
 type TProps = {
   userName: string;

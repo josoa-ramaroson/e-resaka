@@ -1,5 +1,6 @@
 import { microIcon, sendIcon } from "../../../../../assets";
-import { Button } from "../../../components";
+import { Button } from "../../../../../components";
+
 import { SendInput } from "../components";
 
 export const ChatInputFooter = () => {

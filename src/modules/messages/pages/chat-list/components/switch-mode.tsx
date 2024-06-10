@@ -11,8 +11,8 @@ export const SwitchMode = () => {
                 setToggle(!toggle)
             }}>
             <div
-                className={"bg-custom-green-gradient md:w-6 md:h-6 h-5 w-5 rounded-full shadow-md transform"
-                    + (toggle ? null : toggleClass)}>
+                className={"bg-custom-green-gradient md:w-6 md:h-6 h-5 w-5 rounded-full shadow-md transform" + (toggle ? null : toggleClass)}>
+                        {toggle ? "☀️" : "🌙"}
             </div>
         </div>
     )

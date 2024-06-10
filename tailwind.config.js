@@ -7,11 +7,12 @@ export default {
         "custom-green-gradient":  "linear-gradient(45deg, #00BD78 20%, #04ACBB)",
         "chat-bg": "url('/chat-bg.jpg')",
         "my-message": "linear-gradient(90deg, #00BD78 1%, #04ACBB)",
-        
+        "register": "url('/register-bg.png')"
       },
       colors: {
         primary: "#04ACBB",
-        secondary: "#DBE2DB",
+        // secondary: "#DBE2DB",
+        secondary: "#BACFC6",
         neutral: "#fff",
         constrast: "#000",
         online: "#00BD32",
@@ -19,7 +20,7 @@ export default {
         success: "",
         warning: "",
         error: "",
-
+        input: "#F1F3F3",
         "others-message": "#5D656A",
         "new-message": "#F23C3C",
         "tab-inactive": "#8FADBD",

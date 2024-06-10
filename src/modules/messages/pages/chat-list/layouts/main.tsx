@@ -1,8 +1,26 @@
-import { friendIcon, groupIcon, jennaImage, liantsoImage, recentIcon } from "../../../../../assets"
+import { friendIcon, groupIcon, jennaImage, recentIcon } from "../../../../../assets"
 import { ChatPreview, Chats, SearchBar, Tab } from "../components"
 import { TabNav } from "./tab-nav"
 
-export const MainChatList = () => {
+import { TConversation } from "../../../types/conversation";
+import { TMessage } from "../../../types";
+
+import messages from "../../../data/message.json";
+
+type TProps = {
+    conversations: TConversation[] | null;
+    setcurrentChatterId: any;
+};
+
+
+// function you will change after
+function getLastMessage(conversation: TConversation): TMessage {
+    return messages.filter((message) => message.id === conversation.lastMessageId)[0];
+}
+
+export const MainChatList = (props: TProps) => {
+    const { conversations, setcurrentChatterId } = props;
+
     return (
         <div className="flex flex-col gap-4 flex-1" >
             <SearchBar />
@@ -11,16 +29,13 @@ export const MainChatList = () => {
                 <Tab label="Amis" icon={friendIcon} />
                 <Tab label="Groupes" icon={groupIcon} />
             </TabNav>
-            <Chats >
-                <ChatPreview 
-                    message={{author: "jenna Ortega", content:"ito le izy bain fa tandremo sao misy mangalatra any"}}
-                    image={jennaImage}
-                    isOnline={true} 
-                    isNew={true}/>
-                <ChatPreview
-                    message={{author: "liantsoa", content:"ito le izy bain fa tandremo sao misy mangalatra any"}}
-                    image={liantsoImage}
-                    isOnline={true} />
+            <Chats>
+                {conversations?.map((conversation) =>
+                    <ChatPreview
+                        key={conversation.id}
+                        message={getLastMessage(conversation)}
+                        setcurrentChatterId={setcurrentChatterId} />)}
+
             </Chats>
         </div>
     )

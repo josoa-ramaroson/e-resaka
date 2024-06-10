@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "username": "Jenna ortega",
+        "email": "jenna@gmail.com",
+        "profilePicture": "/public/profile/test.png"
+    },
+    {
+        "id": 2,
+        "username": "Liantsoa Tsiory",
+        "email": "tsiory@gmail.com",
+        "profilePicture": "/public/profile/test.png"
+    },
+    {
+        "id": 3,
+        "username": "Andry Rajoelina",
+        "profilePicture": "/public/profile/test.png"
+    },
+    {
+        "id": 4,
+        "username": "Natache Mamiandonirina",
+        "profilePicture": "/public/profile/test.png"
+    }
+]

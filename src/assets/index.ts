@@ -12,6 +12,9 @@ import infoIcon from "./icons/info-icon.svg";
 import microIcon from "./icons/micro-icon.svg";
 import sendIcon from "./icons/send-icon.svg";
 
+import leftArrow from "./icons/left-arrow.svg";
+import rightArrow from "./icons/right-arrow.svg";
+import imageIcon from "./icons/image-icon.svg";
 
 export {
   logoImage,
@@ -27,4 +30,7 @@ export {
   phoneIcon, 
   microIcon,
   sendIcon,
+  leftArrow,
+  rightArrow,
+  imageIcon
 };

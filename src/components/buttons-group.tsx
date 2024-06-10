@@ -1,5 +1,3 @@
-import { infoIcon, phoneIcon, videoIcon } from "../../../assets";
-import { Button } from ".";
 
 type TProps = {
     className?: string;
