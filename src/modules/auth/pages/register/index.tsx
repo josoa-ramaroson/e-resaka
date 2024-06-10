@@ -9,7 +9,7 @@ import { Identification } from "./components/identification";
 
 export const Register = () => {
 
-  const [step, setStep] = useState(RegisterStep.PERSONAL);
+  const [step, setStep] = useState(RegisterStep.ACCOUNT);
 
   const [section, setSection] = useState(RegisterStepTitle[step]);
 
@@ -44,11 +44,11 @@ export const Register = () => {
               text="Précedent"
               icon={leftArrow}
               onClick={handlePrevious}
-              className={"border-secondary text-secondary border-2 " + ((step === RegisterStep.ACCOUNT) ? "pointer-events-none" : "")} />
-            
+              className={((step === RegisterStep.ACCOUNT) ? "pointer-events-none" : "") + " border-secondary text-secondary border-2 "} />
+
             <ButtonAuth
               text={(step !== RegisterStep.IDENTIFICATION) ? "Suivant" : "Valider"}
-              icon={(step !== RegisterStep.IDENTIFICATION) ? rightArrow: null}
+              icon={(step !== RegisterStep.IDENTIFICATION) ? rightArrow : null}
               onClick={handleNext}
               className={"flex-row-reverse  " + ((step !== RegisterStep.IDENTIFICATION) ? "border-primary border-2" : "bg-custom-green-gradient text-white text-lg")} />
           </ButtonGroup>
